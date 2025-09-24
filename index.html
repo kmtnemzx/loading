@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NodePrompt Terminal – Loading</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:'Courier New', monospace;
+      background:#000;
+      color:#0f0;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+    }
+    .terminal-header{
+      background:#222;
+      color:#0f0;
+      padding:10px 12px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .terminal-buttons{display:flex;gap:4px;}
+    .btn{width:14px;height:14px;border-radius:50%;border:none;}
+    .btn.close{background:#ff5f57;}
+    .btn.minimize{background:#ffbd2e;}
+    .btn.maximize{background:#28ca42;}
+    .terminal-title{color:#888;margin-left:6px;}
+
+    .terminal-body{flex:1;display:flex;align-items:center;justify-content:center;}
+    .loading{
+      font-size:14px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .spinner{
+      border:2px solid #0f0;
+      border-top:2px solid transparent;
+      border-radius:50%;
+      width:18px;height:18px;
+      animation:spin 1s linear infinite;
+    }
+    @keyframes spin{100%{transform:rotate(360deg);}}
+  </style>
+</head>
+<body>
+  <div class="terminal-header">
+    <div class="terminal-buttons">
+      <button class="btn close"></button>
+      <button class="btn minimize"></button>
+      <button class="btn maximize"></button>
+    </div>
+    <div class="terminal-title">nodeprompt@ai-terminal:~$</div>
+  </div>
+
+  <div class="terminal-body">
+    <div class="loading">
+      <div class="spinner"></div>
+      Loading launch...
+    </div>
+  </div>
+</body>
+</html>
